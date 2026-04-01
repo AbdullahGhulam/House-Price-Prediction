@@ -198,18 +198,6 @@ jupyter notebook house_price_prediction_clean.ipynb
 ```
 Then execute cells sequentially from top to bottom.
 
-### Option 2: Run Training Script
-```bash
-python train.py
-```
-
-This will:
-1. Load the housing dataset
-2. Perform exploratory analysis
-3. Train the linear regression model
-4. Display comprehensive evaluation metrics
-5. Print feature coefficients and residual statistics
-
 ### Option 3: Use the Model Programmatically
 ```python
 from sklearn.linear_model import LinearRegression
@@ -226,37 +214,6 @@ predictions = model.predict(X_test)
 # Evaluate
 metrics = utilities.evaluate_model(y_test, predictions)
 utilities.print_evaluation_metrics(metrics)
-```
-
----
-
-## Expected Output
-
-When running the training script, you should see:
-
-```
-============================================================
-HOUSE PRICE PREDICTION - LINEAR REGRESSION
-============================================================
-
-[Step 1] Loading data...
-✓ Data loaded successfully. Shape: (5000, 6)
-
-[Step 2] Exploring dataset...
-Dataset Overview:
-Shape: 5000 rows, 5 columns
-...
-
-[Step 9] Evaluating model performance...
-
-==================================================
-MODEL PERFORMANCE METRICS
-==================================================
-R² Score:                  0.9203
-Mean Absolute Error (MAE):  $79,934.23
-Mean Squared Error (MSE):   $10,000,000.00
-Root Mean Squared Error:    $100,000.00
-==================================================
 ```
 
 ---
@@ -295,15 +252,12 @@ Root Mean Squared Error:    $100,000.00
 - [ ] Cross-validation for more robust performance estimates
 - [ ] Handle outliers using robust regression techniques
 - [ ] Add geographic features (latitude, longitude) if available
-- [ ] Time-series analysis if temporal data available
-- [ ] Model deployment as REST API using Flask/FastAPI
 
 ---
 
 ## Code Quality
 
 This project follows professional Python standards:
-- **PEP 8 Compliance:** Code formatted according to Python style guide
 - **Type Hints:** Function signatures include type annotations
 - **Documentation:** Comprehensive docstrings for all functions
 - **Modularity:** Reusable utility functions separated from main pipeline
@@ -317,11 +271,6 @@ This project is provided for educational and portfolio purposes. Feel free to us
 
 ---
 
-## Contact & Questions
-
-For questions or suggestions about this project, please open an issue on GitHub or contact the author.
-
----
 
 ## Acknowledgments
 
